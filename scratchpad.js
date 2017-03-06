@@ -66,7 +66,7 @@ var fibHelper = function(n) {
 
 
 //They will be called here
-//fibDiv.innerHTML = fibHelper(6);
+fibDiv.innerHTML = fibHelper(6);
 pellDiv.innerHTML = 'pelletor';
 triDiv.innerHTML = 'what color is this one?';
 
