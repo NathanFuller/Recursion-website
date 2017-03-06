@@ -4,7 +4,7 @@
 var style = document.createElement('link');
 style.setAttribute('rel', 'stylesheet');
 style.setAttribute('href', 'myStyle.css');
-document.querySelector('head').appendChild(style)
+document.querySelector('head').appendChild(style);
 //Note: All of this ^^ will need to be replaced by turning the document into a bunch of string literals
 // that will be appended to the document with js
 
@@ -25,14 +25,52 @@ document.querySelector('body').appendChild(triDiv);
 
 //Write a function that returns a Fibonacci tree
 
+var fibHelper = function(n) {
+
+    var p;
+    var value;
+    var div = document.createElement('div');
+    div.setAttribute("class", "fib");
+
+    if (n<2){
+        if (n===0){
+            value = 0;
+        }
+        else if (n===1){
+            value = 1;
+        }
+        p = document.createElement('p');
+        p.textContent = 'Fib(' + n + ') = ' + value;
+        div.appendChild(p);
+    }
+    else{
+        var left = fibHelper(n-1);
+        left.html.setAttribute("class", "fib-left");
+        var right = fibHelper(n-2);
+        right.html.setAttribute("class", "fib-right");
+
+        value = left.value+right.value;
+        p = document.createElement('p');
+        p.textContent = 'Fib(' +n+ ') = ' + value;
+        div.appendChild(p);
+
+        div.appendChild(left.html);
+        div.appendChild(right.html);
+
+    }
+    return { 'value': value, 'html': div};
+};
+
 //Write a function that returns a Pell tree
 
 //Write a function that returns a Tribonacci tree
 
 
 //They will be called here
-fibDiv.innerHTML = 'goop';
+fibDiv.innerHTML = fibHelper(6);
 pellDiv.innerHTML = 'pelletor';
 triDiv.innerHTML = 'what color is this one?';
 
 document.querySelector('title').innerHTML = 'Recursion Website';
+
+
