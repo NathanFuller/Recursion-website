@@ -26,13 +26,12 @@ document.querySelector('body').appendChild(triDiv);
 //Write a function that returns a Fibonacci tree
 
 var fibHelper = function(n) {
-
     var p;
     var value;
     var div = document.createElement('div');
-    div.setAttribute("class", "fib");
+    div.setAttribute("class", "fib");           //<div class='fib'></div>
 
-    if (n<2){
+    if (n<2){ //These won't have children
         if (n===0){
             value = 0;
         }
@@ -40,10 +39,10 @@ var fibHelper = function(n) {
             value = 1;
         }
         p = document.createElement('p');
-        p.textContent = 'Fib(' + n + ') = ' + value;
+        p.textContent = 'Fib(' + n + ') = ' + value;    //For example: <div class='fib'><p>Fib(0) = 0</p></div>
         div.appendChild(p);
     }
-    else{
+    else{ //These ones will have children
         var left = fibHelper(n-1);
         left.html.setAttribute("class", "fib-left");
         var right = fibHelper(n-2);
@@ -58,7 +57,7 @@ var fibHelper = function(n) {
         div.appendChild(right.html);
 
     }
-    return { 'value': value, 'html': div};
+    return { 'value': value, 'html': div};          // object that includes a 'value' and an 'html' (div)
 };
 
 //Write a function that returns a Pell tree
@@ -67,7 +66,7 @@ var fibHelper = function(n) {
 
 
 //They will be called here
-fibDiv.innerHTML = fibHelper(6);
+fibDiv.appendChild(fibHelper(6));
 pellDiv.innerHTML = 'pelletor';
 triDiv.innerHTML = 'what color is this one?';
 
