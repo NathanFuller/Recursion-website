@@ -42,7 +42,7 @@ var fibHelper = function(n) {
         p.textContent = 'Fib(' + n + ') = ' + value;    //For example: <div class='fib'><p>Fib(0) = 0</p></div>
         div.appendChild(p);
     }
-    else{ //These ones will have children
+    else{ //These ones will have children that are themselves "fibHelper object"s...
         var left = fibHelper(n-1);
         left.html.setAttribute("class", "fib-left");
         var right = fibHelper(n-2);
