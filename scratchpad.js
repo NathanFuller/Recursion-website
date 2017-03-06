@@ -34,4 +34,5 @@ document.querySelector('body').appendChild(triDiv);
 fibDiv.innerHTML = 'goop';
 pellDiv.innerHTML = 'pelletor';
 triDiv.innerHTML = 'what color is this one?';
-fibDiv.
+
+document.querySelector('title').innerHTML = 'Recursion Website';
