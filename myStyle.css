@@ -1,6 +1,8 @@
 /*myStyle.css*/
 
-/*I don't have anything in here yet, but it'll be important later.*/
+body{
+    width: 5000px;
+}
 
 #bigFibDiv{
     background-color: #FFC600;
@@ -8,12 +10,16 @@
 }
 
 #bigPellDiv{
-    background-color: yellow;
+    background-color: #FF6A00;
+    text-align: center;
 }
 
 #bigTriDiv{
     background-color: gray;
+    text-align: center;
 }
+
+
 
 .fib{
     overflow: auto;
@@ -30,5 +36,50 @@
     float: right;
     display: inline-block;
     background-color: rgba(90, 84, 148, 0.1);
+    margin-left: 4px;
+}
+
+
+
+.pell{
+    overflow: auto;
+    margin-top: 10px;
+}
+.pell-left{
+    float: left;
+    display: inline-block;
+    background-color: rgba(0, 210, 181, 0.1);
+    margin-left: 4px;
+
+}
+
+.pell-right{
+    float: right;
+    display: inline-block;
+    background-color: rgba(0, 210, 181, 0.1);
+    margin-left: 4px;
+}
+
+
+.tri{
+    overflow:auto
+}
+.tri-left{
+    float: left;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-left: 4px;
+}
+.tri-mid{
+    float: left;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-left: 4px;
+}
+
+.tri-right{
+    float: right;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
     margin-left: 4px;
 }

@@ -65,14 +65,83 @@ var fibbonaci = function (number) {
     return fibHelper(number).html;
 };
 //Write a function that returns a Pell tree
+function pellHelper(n){
+    var value;
+    var div = document.createElement('div');
+    div.setAttribute('class', 'pell');
+
+    if (n<2){
+        if (n===0){
+            value = 0;
+        } else if (n===1){
+            value = 1;
+        }
+        p = document.createElement('p');
+        p.textContent = 'Pell(' + n + ') = ' + value;
+        div.appendChild(p);
+    } else {
+        var left = pellHelper(n-1);
+        left.html.setAttribute('class', 'pell-left');
+        var right = pellHelper(n-2);
+        right.html.setAttribute('class', 'pell-right');
+
+        value = (2*left.value) + right.value;
+        p = document.createElement('p');
+        p.textContent = 'Pell(' + n + ') = ' + value;
+        div.appendChild(p);
+
+        div.appendChild(left.html);
+        div.appendChild(right.html);
+    }
+    return { 'value': value, 'html': div};
+}
+
+function pell(number){
+    return pellHelper(number).html;
+}
 
 //Write a function that returns a Tribonacci tree
+function triHelper(n){
+    var value;
+    var div = document.createElement('div');
+    div.setAttribute('class', 'tri');
 
+    if (n<3){
+        if (n===0){
+            value = 0;
+        } else if (n===1||n===2){
+            value = 1;
+        }
+        p = document.createElement('p');
+        p.textContent = 'Tri(' + n + ') = ' + value;
+        div.appendChild(p);
+    } else {
+        var left = triHelper(n-1);
+        left.html.setAttribute('class', 'tri-left');
+        var mid = triHelper(n-2);
+        mid.html.setAttribute('class', 'tri-mid');
+        var right = triHelper(n-3);
+
+        value = left.value + mid.value + right.value;
+        p = document.createElement('p');
+        p.textContent = 'Tri(' + n + ') = ' + value;
+        div.appendChild(p);
+
+        div.appendChild(left.html);
+        div.appendChild(mid.html);
+        div.appendChild(right.html);
+    }
+    return { 'value': value, 'html': div};
+}
+
+function tri(number){
+    return triHelper(number).html;
+}
 
 //They will be called here
 fibDiv.appendChild(fibbonaci(6));
-//pellDiv.innerHTML = 'pelletor';
-//triDiv.innerHTML = 'what color is this one?';
+pellDiv.appendChild(pell(6));
+triDiv.appendChild(tri(6));
 
 document.querySelector('title').innerHTML = 'Recursion Website';
 
