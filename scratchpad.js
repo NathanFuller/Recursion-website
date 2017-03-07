@@ -67,12 +67,10 @@ var fibHelper = function(n) {
 
 //They will be called here
 fibDiv.appendChild(fibHelper(6).html);
-pellDiv.innerHTML = 'pelletor';
-triDiv.innerHTML = 'what color is this one?';
+//pellDiv.innerHTML = 'pelletor';
+//triDiv.innerHTML = 'what color is this one?';
 
 document.querySelector('title').innerHTML = 'Recursion Website';
-var par = document.createElement('p');
-par.innerHTML = 'PLEASE APPEAR!!!!!';
-document.querySelector('body').appendChild(par);
+
 
 

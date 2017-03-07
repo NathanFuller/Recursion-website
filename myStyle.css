@@ -3,7 +3,7 @@
 /*I don't have anything in here yet, but it'll be important later.*/
 
 #bigFibDiv{
-    background-color: green;
+    background-color: #00FF00;
 }
 
 #bigPellDiv{
@@ -12,4 +12,16 @@
 
 #bigTriDiv{
     background-color: gray;
+}
+
+.fib-left{
+    float: left;
+    display: inline-block;
+    alignment: center;
+}
+
+.fib-right{
+    float: right;
+    display: inline-block;
+    alignment: center;
 }
