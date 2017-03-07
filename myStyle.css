@@ -3,7 +3,8 @@
 /*I don't have anything in here yet, but it'll be important later.*/
 
 #bigFibDiv{
-    background-color: #00FF00;
+    background-color: #FFC600;
+    text-align: center;
 }
 
 #bigPellDiv{
@@ -14,14 +15,20 @@
     background-color: gray;
 }
 
+.fib{
+    overflow: auto;
+}
 .fib-left{
     float: left;
     display: inline-block;
-    alignment: center;
+    background-color: rgba(90, 84, 148, 0.4);
+    margin-left: 4px;
+
 }
 
 .fib-right{
     float: right;
     display: inline-block;
-    alignment: center;
+    background-color: rgba(90, 84, 148, 0.1);
+    margin-left: 4px;
 }

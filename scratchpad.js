@@ -60,13 +60,17 @@ var fibHelper = function(n) {
     return { 'value': value, 'html': div};          // object that includes a 'value' and an 'html' (div)
 };
 
+
+var fibbonaci = function (number) {
+    return fibHelper(number).html;
+};
 //Write a function that returns a Pell tree
 
 //Write a function that returns a Tribonacci tree
 
 
 //They will be called here
-fibDiv.appendChild(fibHelper(6).html);
+fibDiv.appendChild(fibbonaci(6));
 //pellDiv.innerHTML = 'pelletor';
 //triDiv.innerHTML = 'what color is this one?';
 
