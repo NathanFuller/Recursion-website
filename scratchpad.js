@@ -121,6 +121,7 @@ function triHelper(n){
         var mid = triHelper(n-2);
         mid.html.setAttribute('class', 'tri-mid');
         var right = triHelper(n-3);
+        right.html.setAttribute('class', 'tri-right');
 
         value = left.value + mid.value + right.value;
         p = document.createElement('p');
@@ -139,9 +140,9 @@ function tri(number){
 }
 
 //They will be called here
-fibDiv.appendChild(fibbonaci(6));
-pellDiv.appendChild(pell(6));
-triDiv.appendChild(tri(6));
+fibDiv.appendChild(fibbonaci(11));
+pellDiv.appendChild(pell(11));
+triDiv.appendChild(tri(11));
 
 document.querySelector('title').innerHTML = 'Recursion Website';
 

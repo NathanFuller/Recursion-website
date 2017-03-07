@@ -1,7 +1,7 @@
 /*myStyle.css*/
 
 body{
-    width: 5000px;
+    width: 1000000px;
 }
 
 #bigFibDiv{
@@ -28,15 +28,15 @@ body{
     float: left;
     display: inline-block;
     background-color: rgba(90, 84, 148, 0.4);
-    margin-left: 4px;
+    width: 48%;
 
 }
 
 .fib-right{
     float: right;
     display: inline-block;
-    background-color: rgba(90, 84, 148, 0.1);
-    margin-left: 4px;
+    background-color: rgba(90, 84, 148, 0.4);
+    width: 48%;
 }
 
 
@@ -44,12 +44,13 @@ body{
 .pell{
     overflow: auto;
     margin-top: 10px;
+
 }
 .pell-left{
     float: left;
     display: inline-block;
     background-color: rgba(0, 210, 181, 0.1);
-    margin-left: 4px;
+    width: 48%;
 
 }
 
@@ -57,29 +58,29 @@ body{
     float: right;
     display: inline-block;
     background-color: rgba(0, 210, 181, 0.1);
-    margin-left: 4px;
+    width: 48%;
 }
 
 
 .tri{
-    overflow:auto
+    overflow:auto;
+    margin-top: 10px;
 }
 .tri-left{
     float: left;
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.1);
-    margin-left: 4px;
+    width: 33%;
 }
 .tri-mid{
-    float: left;
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.1);
-    margin-left: 4px;
+    width: 33%;
 }
 
 .tri-right{
     float: right;
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.1);
-    margin-left: 4px;
+    width: 33%;
 }
