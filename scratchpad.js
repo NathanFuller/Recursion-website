@@ -147,7 +147,7 @@ function tri(number){
 //Function that adds titles and links to the divs
 function explanationAdderMaker(div, name, link){
     var aLink = document.createElement('a');
-    aLink.addAttribute('href', link);
+    aLink.setAttribute('href', link);
     aLink.innerHTML = name;
     div.appendChild(aLink);
 }
