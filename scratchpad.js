@@ -145,28 +145,25 @@ function tri(number){
 }
 
 //Function that adds titles and links to the divs
-function explanationAdderMaker(div, name, link){
+function explanationAdder(div, name, link){
     var aLink = document.createElement('a');
     aLink.setAttribute('href', link);
     aLink.innerHTML = name;
     div.appendChild(aLink);
 }
-
-var fibExplainer = explanationAdderMaker(fibDiv, 'Fibbonaci Sequence', 'https://oeis.org/A000045');
-var pellExplainer = explanationAdderMaker(pellDiv, 'Pell Sequence', 'https://oeis.org/A000129');
-var triExplainer = explanationAdderMaker(triDiv, 'Tribbonaci Sequence', 'https://oeis.org/A000073');
+explanationAdder(fibDiv, 'Fibbonaci Sequence', 'https://oeis.org/A000045');
+explanationAdder(pellDiv, 'Pell Sequence', 'https://oeis.org/A000129');
+explanationAdder(triDiv, 'Tribbonaci Sequence', 'https://oeis.org/A000073');
 
 
 
 
 //They will be called here
-fibExplainer();
+
 fibDiv.appendChild(fibbonaci(11));
 
-pellExplainer();
 pellDiv.appendChild(pell(11));
 
-triExplainer();
 triDiv.appendChild(tri(11));
 
 document.querySelector('title').innerHTML = 'Recursion Website';
