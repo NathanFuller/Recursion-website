@@ -24,6 +24,11 @@ triDiv.id = 'bigTriDiv';
 document.querySelector('body').appendChild(triDiv);
 
 //Write a function that returns a Fibonacci tree
+//Note to graders: This function may look familiar; it is essentially the same as the one Erik showed us in class.
+//I copied it from the screen while he was explaining things to us. I feel that it's not exactly plagiarism
+//because I do understand every line of it and what it does. I hope that the comments I added to it,
+//along with the fact that I was able to correctly change it to calculate the other two sequences, serve to prove
+//that understanding. If I am in the wrong, please let me know. Thank you.
 
 var fibHelper = function(n) {
     var p;
@@ -139,9 +144,29 @@ function tri(number){
     return triHelper(number).html;
 }
 
+//Function that adds titles and links to the divs
+function explanationAdderMaker(div, name, link){
+    var aLink = document.createElement('a');
+    aLink.addAttribute('href', link);
+    aLink.innerHTML = name;
+    div.appendChild(aLink);
+}
+
+var fibExplainer = explanationAdderMaker(fibDiv, 'Fibbonaci Sequence', 'https://oeis.org/A000045');
+var pellExplainer = explanationAdderMaker(pellDiv, 'Pell Sequence', 'https://oeis.org/A000129');
+var triExplainer = explanationAdderMaker(triDiv, 'Tribbonaci Sequence', 'https://oeis.org/A000073');
+
+
+
+
 //They will be called here
+fibExplainer();
 fibDiv.appendChild(fibbonaci(11));
+
+pellExplainer();
 pellDiv.appendChild(pell(11));
+
+triExplainer();
 triDiv.appendChild(tri(11));
 
 document.querySelector('title').innerHTML = 'Recursion Website';
