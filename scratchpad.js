@@ -1,12 +1,96 @@
 //this is my javascript
 
-//Create an element in the <head> that looks like this: <link rel="stylesheet" href="styles.css">
-var style = document.createElement('link');
-style.setAttribute('rel', 'stylesheet');
-style.setAttribute('href', 'myStyle.css');
+//Add style to document
+var style = document.createElement('style');
+var myStyle = "/*myStyle.css*/" +
+    "" +
+    "body{" +
+    "    width: 1000000px;" +
+    "}" +
+    "" +
+    "#bigFibDiv{" +
+    "    background-color: #FFC600;" +
+    "    text-align: center;" +
+    "}" +
+    "" +
+    "#bigPellDiv{" +
+    "    background-color: #FF6A00;" +
+    "    text-align: center;" +
+    "}" +
+    "" +
+    "#bigTriDiv{" +
+    "    background-color: gray;" +
+    "    text-align: center;" +
+    "}" +
+    "" +
+    "" +
+    "" +
+    ".fib{" +
+    "    overflow: auto;" +
+    "}" +
+    ".fib-left{" +
+    "    float: left;" +
+    "    display: inline-block;" +
+    "    background-color: rgba(90, 84, 148, 0.4);" +
+    "    width: 48%;" +
+    "" +
+    "}" +
+    "" +
+    ".fib-right{" +
+    "    float: right;" +
+    "    display: inline-block;" +
+    "    background-color: rgba(90, 84, 148, 0.4);" +
+    "    width: 48%;" +
+    "}" +
+    "" +
+    "" +
+    "" +
+    ".pell{" +
+    "    overflow: auto;" +
+    "    margin-top: 10px;" +
+    "" +
+    "}" +
+    ".pell-left{" +
+    "    float: left;" +
+    "    display: inline-block;" +
+    "    background-color: rgba(0, 210, 181, 0.1);" +
+    "    width: 48%;" +
+    "" +
+    "}" +
+    "" +
+    ".pell-right{" +
+    "    float: right;" +
+    "    display: inline-block;" +
+    "    background-color: rgba(0, 210, 181, 0.1);" +
+    "    width: 48%;" +
+    "}" +
+    "" +
+    "" +
+    ".tri{" +
+    "    overflow:auto;" +
+    "    margin-top: 10px;" +
+    "}" +
+    ".tri-left{" +
+    "    float: left;" +
+    "    display: inline-block;" +
+    "    background-color: rgba(255, 255, 255, 0.1);" +
+    "    width: 33%;" +
+    "}" +
+    ".tri-mid{" +
+    "    display: inline-block;" +
+    "    background-color: rgba(255, 255, 255, 0.1);" +
+    "    width: 33%;" +
+    "}" +
+    "" +
+    ".tri-right{" +
+    "    float: right;" +
+    "    display: inline-block;" +
+    "    background-color: rgba(255, 255, 255, 0.1);" +
+    "    width: 33%;" +
+    "}";
+
+style.innerHTML = myStyle;
 document.querySelector('head').appendChild(style);
-//Note: All of this ^^ will need to be replaced by turning the document into a bunch of string literals
-// that will be appended to the document with js
 
 
 
